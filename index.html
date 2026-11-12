@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Launch Control | Kriger Training</title>
+  <meta name="description" content="After our last Building Block it is now time to put the capacities together again. Read about the new training week, the template for each track and the tests in Test Week 3.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kriger Training">
+  <meta property="og:title" content="Launch Control | Kriger Training">
+  <meta property="og:description" content="After our last Building Block it is now time to put the capacities together again. Read about the new training week, the template for each track and the tests in Test Week 3.">
+  <meta property="og:url" content="https://block6.krigertraining.com/">
+  <link rel="canonical" href="https://block6.krigertraining.com/">
+  <meta property="og:image" content="https://block6.krigertraining.com/img/launch-control-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Launch Control, CF Specific Block from Kriger Training">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Launch Control | Kriger Training">
+  <meta name="twitter:description" content="After our last Building Block it is now time to put the capacities together again. Read about the new training week, the template for each track and the tests in Test Week 3.">
+  <meta name="twitter:image" content="https://block6.krigertraining.com/img/launch-control-share.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    /* Kriger Training · Launch Control (alternative layout)
+       Colour system: competition bumper plates. The heavier the plate, the harder the day.
+       green 10 kg = easy, blue 20 kg = medium, red 25 kg = hard. */
+    :root {
+      --white: #FFFFFF;
+      --steel: #ECEEED;
+      --steel-2: #DCE0DE;
+      --ink: #000000;
+      --text: #1F2120;
+      --muted: #5C6260;
+      --green: #1F8048;
+      --blue: #1E4FA6;
+      --red: #C8202A;
+      --wrap: 1240px;
+      --gut: 40px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Barlow', sans-serif; font-size: 17px; line-height: 1.65; color: var(--text); background: var(--white); overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
+
+    /* Type */
+    .display { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; text-transform: uppercase; line-height: .82; letter-spacing: -0.01em; color: var(--ink); }
+    h2 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(40px, 5.4vw, 68px); line-height: .95; letter-spacing: -0.005em; color: var(--ink); }
+    h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 28px; line-height: 1.05; color: var(--ink); }
+    p { max-width: 66ch; }
+    p + p { margin-top: 1em; }
+    .lede { font-size: 20px; line-height: 1.55; }
+
+    /* Nav */
+    .nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid transparent; transition: border-color .3s; }
+    .nav.scrolled { border-bottom-color: var(--steel-2); }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .nav img { height: 22px; filter: invert(1); }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { text-decoration: none; font-size: 16px; font-weight: 500; color: var(--muted); }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a.go { color: var(--ink); font-weight: 600; }
+    .menu { display: none; background: none; border: none; font: 600 16px 'Barlow', sans-serif; color: var(--ink); cursor: pointer; }
+
+    .btn { display: inline-block; background: var(--ink); color: var(--white); text-decoration: none; font-weight: 600; font-size: 17px; padding: 14px 24px; border-radius: 3px; }
+    .btn:hover { background: var(--blue); }
+    .btn.light { background: var(--white); color: var(--ink); }
+    .btn.light:hover { background: var(--steel); }
+    .tlink { font-weight: 600; text-decoration: none; border-bottom: 2px solid currentColor; padding-bottom: 1px; }
+
+    /* Hero */
+    .hero { padding: 56px 0 0; }
+    .hero-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 48px; align-items: end; }
+    .hero h1 { font-size: clamp(88px, 15.5vw, 230px); }
+    .hero-side { padding-bottom: 10px; }
+    .hero-meta { font-size: 17px; color: var(--muted); margin-bottom: 18px; }
+    .hero-meta strong { color: var(--ink); font-weight: 600; display: block; font-size: 19px; }
+    .hero-side .lede { margin-bottom: 26px; }
+    .hero-act { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
+
+    /* Generic section */
+    .sec { padding: 104px 0; }
+    .sec.steel { background: var(--steel); }
+    .sec.black { background: var(--ink); color: #D9DBDA; }
+    .sec.black h2, .sec.black h3 { color: var(--white); }
+    .split { display: grid; grid-template-columns: 4fr 7fr; gap: 64px; align-items: start; }
+    .split > h2 { position: sticky; top: 96px; }
+
+    /* Curves: before and now */
+    .curves { margin-top: 72px; }
+    .cv { display: grid; grid-template-columns: 4fr 7fr; gap: 64px; align-items: center; padding: 28px 0; }
+    .cv + .cv { border-top: 1px solid var(--steel-2); }
+    .cv-txt h3 { font-size: 34px; margin-bottom: 8px; }
+    .cv-txt p { color: var(--muted); font-size: 16px; }
+    .cv.new .cv-txt p { color: var(--text); }
+    .cv-viz svg { width: 100%; height: auto; display: block; overflow: visible; }
+    .cv-base { stroke: var(--steel-2); stroke-width: 2; }
+    .cl { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linecap: round; }
+    .cv.old .cl { stroke: #A3A8A6; stroke-dasharray: 2 7; }
+    .restdot { fill: var(--white); stroke: #A3A8A6; stroke-width: 2; }
+    .cv-days { display: grid; grid-template-columns: repeat(7, 1fr); margin-top: 10px; }
+    .cv-days span { text-align: center; font-size: 14px; line-height: 1.35; color: var(--muted); }
+    .cv-days b { display: block; font-weight: 600; color: var(--ink); }
+    .plates-note { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; margin-top: 30px; font-size: 16px; color: var(--muted); }
+    .plates-note p { flex-basis: 100%; max-width: none; }
+    .plates-note span { display: inline-flex; gap: 8px; align-items: center; color: var(--text); font-weight: 500; }
+    .pl { width: 16px; height: 16px; border-radius: 50%; display: inline-block; box-shadow: inset 0 0 0 5px rgba(255,255,255,0); position: relative; }
+    .pl::after { content: ""; position: absolute; inset: 6px; border-radius: 50%; background: var(--white); }
+    .pl.easy { background: var(--green); } .pl.medium { background: var(--blue); } .pl.hard { background: var(--red); }
+
+    /* Quote */
+    .quote { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: clamp(34px, 4.6vw, 60px); line-height: 1.02; color: var(--white); max-width: 27ch; }
+
+    /* Template */
+    .ttabs { display: flex; flex-wrap: wrap; gap: 4px 30px; margin-top: 44px; border-bottom: 2px solid var(--steel-2); }
+    .ttabs button { background: none; border: none; border-bottom: 3px solid transparent; margin-bottom: -2px; padding: 10px 0 12px; font: 600 18px 'Barlow', sans-serif; color: var(--muted); cursor: pointer; white-space: nowrap; }
+    .ttabs button:hover { color: var(--ink); }
+    .ttabs button.active { color: var(--ink); border-bottom-color: var(--ink); }
+    .ttabs .new { font-size: 13px; color: var(--red); margin-left: 6px; vertical-align: 6px; }
+    .tpanel { display: none; padding-top: 32px; }
+    .tpanel.active { display: block; }
+    .tvideo { display: block; width: 100%; border: 0; padding: 0; position: relative; aspect-ratio: 16 / 9; max-width: 820px; background: var(--steel-2); overflow: hidden; }
+    .tvideo img { width: 100%; height: 100%; object-fit: cover; }
+    .tvideo .play { left: 20px; bottom: 20px; width: 56px; height: 56px; }
+    .tvideo .play::after { left: 22px; top: 17px; border-left-width: 17px; border-top-width: 11px; border-bottom-width: 11px; }
+    .tv-label { position: absolute; left: 90px; bottom: 32px; color: var(--white); font-weight: 600; font-size: 17px; text-shadow: 0 1px 12px rgba(0,0,0,.5); }
+    .ph { margin-top: 28px; font-style: italic; color: var(--muted); }
+
+    .wbar { margin-top: 44px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 18px 40px; }
+    .wtabs { display: flex; gap: 30px; }
+    .wtabs button { background: none; border: none; border-bottom: 3px solid transparent; padding: 4px 0 8px; font: 700 26px 'Barlow Condensed', sans-serif; color: var(--muted); cursor: pointer; }
+    .wtabs button.active { color: var(--ink); border-bottom-color: var(--ink); }
+    .tlegend { display: flex; flex-direction: column; gap: 10px; font-size: 14.5px; line-height: 1.4; color: var(--muted); }
+    .tlegend .cats { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+    .tlegend .cats span { display: inline-flex; align-items: center; gap: 7px; color: var(--text); font-weight: 500; }
+    .tlegend .cats i { width: 14px; height: 14px; display: inline-block; }
+    .tlegend .ramp { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .tlegend .rampbar { display: inline-flex; }
+    .tlegend .rampbar i { width: 18px; height: 14px; display: inline-block; }
+    .tlegend em { font-style: normal; margin-left: 6px; }
+    .wgrid { display: grid; margin-top: 22px; column-gap: 10px; grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(0, .62fr) repeat(2, minmax(0, 1fr)) minmax(0, .62fr); grid-template-rows: auto auto auto; }
+    .wgrid[hidden] { display: none; }
+    .dcol { display: grid; grid-row: span 3; grid-template-rows: subgrid; }
+    .dh { padding: 6px 2px 14px; line-height: 1.3; border-bottom: 3px solid var(--ink); }
+    .dh b { display: block; font: 700 24px 'Barlow Condensed', sans-serif; color: var(--ink); }
+    .dh span { display: block; font-size: 15px; font-weight: 600; color: var(--ink); }
+    .dcol.hard .dh span { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .dh small { display: block; font-size: 14px; color: var(--muted); margin-top: 2px; }
+    .dcol.rest .dh { border-bottom-color: var(--steel-2); }
+    .dcol.rest .dh b, .dcol.rest .dh span { color: var(--muted); }
+    .dcol.rest .dh b { font-size: 21px; }
+    .ds { padding: 12px 0 6px; display: flex; flex-direction: column; gap: 6px; }
+    .ds i { font-style: normal; font-weight: 600; font-size: 14px; line-height: 1.4; color: var(--muted); }
+    .part { padding: 10px 12px 11px; color: var(--ink); display: flex; flex-direction: column; gap: 1px; min-height: 76px; line-height: 1.3; }
+    .part.inv { color: var(--white); }
+    .part .pc { font-size: 12.5px; font-weight: 600; opacity: .8; }
+    .part .pn { font-size: 15px; font-weight: 600; }
+    .part .pr { margin-top: auto; padding-top: 6px; font-size: 13.5px; font-weight: 500; opacity: .85; }
+    .ds.dr { grid-row: span 2; }
+    .restbox { flex: 1; padding: 12px; background: #E1E4E2; color: var(--muted); font-size: 14.5px; }
+
+    /* Tracks */
+    .track-list { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px 64px; }
+    .track h3 { font-size: 32px; display: flex; gap: 12px; align-items: baseline; }
+    .track h3 small { font: 600 14px 'Barlow', sans-serif; color: var(--red); }
+    .track .tag { font-weight: 600; color: var(--muted); font-size: 15px; margin: 2px 0 6px; }
+    .track p { font-size: 16.5px; }
+
+    /* Final */
+    .final-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: center; }
+    .final-grid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+    .final-grid p { font-size: 18px; }
+    .final-grid .btn { margin-top: 32px; }
+
+    .footer { background: var(--ink); color: #9BA19F; padding: 0 0 56px; }
+    .footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px; border-top: 1px solid #2B2E2D; padding-top: 32px; }
+    .footer img { height: 22px; }
+    .footer nav { display: flex; flex-wrap: wrap; gap: 8px 26px; }
+    .footer a { text-decoration: none; font-size: 15px; }
+    .footer a:hover { color: var(--white); }
+
+    /* One motion moment: the new curve draws when it comes into view */
+    .cv.new .cl { stroke-dasharray: 900; stroke-dashoffset: 900; }
+    .cv.new .plate { opacity: 0; transition: opacity .4s ease; }
+    .cv.new.drawn .cl { transition: stroke-dashoffset 1.4s ease; stroke-dashoffset: 0; }
+    .cv.new.drawn .plate { opacity: 1; }
+    .cv.new.drawn .plate:nth-of-type(1) { transition-delay: .1s; }
+    @media (prefers-reduced-motion: reduce) {
+      .cv.new .cl { stroke-dasharray: none; stroke-dashoffset: 0; }
+      .cv.new .plate { opacity: 1; }
+      .bigvideo img { transition: none; }
+    }
+
+    /* Responsive */
+    @media (max-width: 1080px) {
+    }
+    @media (max-width: 900px) {
+      :root { --gut: 16px; }
+      .nav-links { display: none; position: absolute; top: 64px; left: 0; right: 0; background: var(--white); flex-direction: column; align-items: flex-start; padding: 20px 16px 24px; gap: 16px; border-bottom: 1px solid var(--steel-2); }
+      .nav-links.open { display: flex; }
+      .menu { display: block; }
+      .hero { padding-top: 32px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 28px; }
+      .lede { font-size: 18px; }
+      .sec { padding: 72px 0; }
+      .split, .cv, .final-grid { grid-template-columns: 1fr; gap: 24px; }
+      .split > h2 { position: static; }
+      .curves { margin-top: 44px; }
+      .cv-days span { font-size: 11.5px; }
+      .track-list { grid-template-columns: 1fr; }
+      .ttabs { gap: 2px 22px; }
+      .ttabs button { font-size: 16px; }
+      .tv-label { left: 78px; bottom: 26px; font-size: 15px; }
+      .tvideo .play { left: 14px; bottom: 14px; width: 48px; height: 48px; }
+      .tvideo .play::after { left: 19px; top: 14px; border-left-width: 14px; border-top-width: 10px; border-bottom-width: 10px; }
+      .wbar { align-items: start; }
+      .wgrid { grid-template-columns: 1fr; row-gap: 22px; }
+      .dcol { display: grid; grid-row: auto; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; column-gap: 8px; }
+      .dcol .dh { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
+      .dcol .dh small { flex-basis: 100%; margin-top: 0; }
+      .dcol.rest { grid-template-columns: 1fr; }
+      .dcol.rest .ds.dr { display: none; }
+      .dcol.one { grid-template-columns: 1fr; }
+      .dcol.one .ds.dr { grid-row: auto; }
+      .part { min-height: 0; }
+    }
+  
+    /* Added: video, training year, capacities, template slots */
+    .play { position: absolute; left: 12px; bottom: 12px; width: 44px; height: 44px; border-radius: 50%; background: var(--white); }
+    .play::after { content: ""; position: absolute; left: 17px; top: 13px; border-left: 14px solid var(--ink); border-top: 9px solid transparent; border-bottom: 9px solid transparent; }
+    .talk { background: var(--ink); padding: 64px 0 80px; margin-top: 72px; }
+    .talk h2 { color: var(--white); font-size: clamp(32px, 3.6vw, 46px); margin-bottom: 24px; }
+    .bigvideo, .tvideo[data-yt] { cursor: pointer; }
+    .bigvideo { position: relative; display: block; width: 100%; aspect-ratio: 16 / 9; background: #1D1F1E; overflow: hidden; border: 0; padding: 0; }
+    .bigvideo img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .bigvideo:hover img { transform: scale(1.015); }
+    .bigvideo .play { left: 50%; top: 50%; bottom: auto; width: 92px; height: 92px; transform: translate(-50%, -50%); }
+    .bigvideo .play::after { left: 36px; top: 28px; border-left-width: 28px; border-top-width: 18px; border-bottom-width: 18px; }
+    .bigvideo iframe, .tvideo iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .on { cursor: default; }
+    .on img, .on .play, .on .tv-label { display: none; }
+    .tvideo.soon { cursor: default; }
+    .tvideo .tv-label { text-align: left; }
+
+    .flow { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin: 26px 0 34px; }
+    .flow li { position: relative; padding: 18px 22px 20px; border-top: 4px solid var(--ink); background: var(--white); }
+    .flow li + li::before { content: ""; position: absolute; left: -22px; top: 34px; width: 16px; height: 2px; background: var(--ink); }
+    .flow li + li::after { content: ""; position: absolute; left: -12px; top: 30px; border-left: 7px solid var(--ink); border-top: 5px solid transparent; border-bottom: 5px solid transparent; }
+    .flow h3 { font-size: 26px; }
+    .flow p { font-size: 15.5px; color: var(--muted); margin-top: 2px; }
+    .flow li.now { background: var(--ink); }
+    .flow li.now h3 { color: var(--white); }
+    .flow .here { display: block; font-weight: 600; font-size: 14.5px; color: #C9CDCB; margin-bottom: 2px; }
+    .sec.steel .flow li:not(.now) { background: var(--white); }
+
+    .cv-txt .cv-sub { display: block; font-weight: 600; font-size: 16px; color: var(--ink); margin: -4px 0 6px; }
+    .cv-txt p + p { margin-top: 0; }
+    .ilink { font-weight: 600; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+    .note { color: var(--muted); }
+
+    .caps { margin-top: 56px; }
+    .cap { display: grid; grid-template-columns: 4fr 7fr; gap: 64px; padding: 48px 0 56px; border-top: 1px solid var(--steel-2); }
+    .cap-side { position: sticky; top: 96px; align-self: start; }
+    .cap-side h3 { font-size: 40px; margin-bottom: 16px; }
+    .tl .tl-k { font-size: 14.5px; font-weight: 600; color: var(--muted); }
+    .tl b { display: block; font: 700 21px 'Barlow Condensed', sans-serif; color: var(--ink); margin: 12px 0 2px; }
+    .tl ul { list-style: none; margin-top: 4px; }
+    .tl li { font-size: 17px; line-height: 1.35; padding: 5px 0; }
+    .tl li small { display: block; color: var(--muted); font-size: 14.5px; }
+    .cap-body p b { color: var(--ink); font-weight: 600; }
+
+    .tph { margin-top: 28px; padding: 40px 32px; border: 2px dashed #C3C8C6; display: flex; flex-direction: column; gap: 4px; }
+    .tph b { font: 700 26px 'Barlow Condensed', sans-serif; color: var(--ink); }
+    .tph span { color: var(--muted); }
+    .tpanel > .wbar:first-of-type { margin-top: 8px; }
+    body { font-size: 18px; }
+    .hero { padding: 64px 0 0; }
+    .hero h1 { font-size: min(180px, calc((100vw - 80px) / 6.4)); white-space: nowrap; }
+    .hero h1 br { display: none; }
+    .hero-row { display: grid; grid-template-columns: 4fr 7fr; gap: 64px; align-items: start; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--steel-2); }
+    .hero-row .lede { margin-bottom: 26px; }
+    .cv-txt p { font-size: 17px; }
+    .cv-days span { font-size: 15px; }
+    .note, .cv-txt p, .plates-note, .plates-note p, .cv-days span { color: var(--text); }
+
+    @media (max-width: 900px) {
+      body { font-size: 17px; }
+      .hero { padding-top: 36px; }
+      .hero h1 { font-size: calc((100vw - 32px) / 6.4); }
+      .hero-row { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; padding-top: 22px; }
+      .cap { grid-template-columns: 1fr; gap: 14px; padding: 36px 0 40px; }
+      .cap-side { position: static; }
+      .cap-side h3 { font-size: 34px; margin-bottom: 10px; }
+      .tl ul { columns: 2; column-gap: 20px; }
+      .tl li { break-inside: avoid; font-size: 16px; }
+      .flow { gap: 8px; margin: 20px 0 28px; }
+      .flow li { padding: 10px 10px 12px; }
+      .flow li + li::before, .flow li + li::after { display: none; }
+      .flow h3 { font-size: 18px; }
+      .flow .here { font-size: 12px; }
+      .flow p { font-size: 12.5px; line-height: 1.35; }
+      .talk { padding: 48px 0 56px; margin-top: 56px; }
+      .bigvideo .play { width: 64px; height: 64px; }
+      .bigvideo .play::after { left: 25px; top: 20px; border-left-width: 19px; border-top-width: 12px; border-bottom-width: 12px; }
+      .tph { padding: 28px 20px; }
+      .cv-days span { font-size: 11.5px; }
+      .cv-txt p { font-size: 15.5px; }
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: calc((100vw - 32px) / 3.45); white-space: normal; }
+      .hero h1 br { display: inline; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a href="#top" aria-label="Kriger Training"><img src="img/kriger-logo.png" alt="Kriger Training"></a>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="navlinks">Menu</button>
+      <nav class="nav-links" id="navlinks">
+        <a href="#week">The week</a>
+        <a href="#template">Template</a>
+        <a href="#tests">Tests</a>
+        <a href="#tracks">Tracks</a>
+        <a href="https://app.fitr.training/p/Kriger" target="_blank" rel="noopener" class="go">Go to the program</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap">
+        <h1 class="display">Launch <br>Control</h1>
+        <div class="hero-row">
+          <p class="hero-meta"><strong>CF Specific Block</strong>November 16 to December 27<br>Test Week 3 from December 28 to January 3</p>
+          <div>
+            <p class="lede">After our last Building Block it is now time to put the capacities together again. For the next 6 weeks we follow a CF Specific Block with a new format where it will be important to stay in control. The name of the block is Launch Control, and you can read more about why below.</p>
+            <div class="hero-act">
+              <a class="btn" href="https://app.fitr.training/p/Kriger" target="_blank" rel="noopener">Go to the program</a>
+              <a class="tlink" href="#year">Read the guide</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE BLOCK IN 11 MINUTES -->
+    <section class="talk" aria-labelledby="talk-title">
+      <div class="wrap">
+        <h2 id="talk-title">The block in 11 minutes</h2>
+        <button class="bigvideo" type="button" data-yt="sbkrpJEiT-8" aria-label="Play the video about Launch Control">
+          <img src="https://i.ytimg.com/vi/sbkrpJEiT-8/maxresdefault.jpg" alt="" loading="lazy">
+          <span class="play" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- THE TRAINING YEAR -->
+    <section class="sec" id="year">
+      <div class="wrap split">
+        <h2>The training year</h2>
+        <div>
+          <p class="lede">We program the year in 4 blocks that look like this:</p>
+          <ol class="flow">
+            <li><h3>Building Block</h3></li>
+            <li class="now"><span class="here">Launch Control</span><h3>CF Specific Block</h3></li>
+            <li><h3>Test Week</h3><p>For the Athlete Profile</p></li>
+          </ol>
+            <p>This way we can put extra focus on fewer things. By narrowing down the list of what we want to improve we make sure that we actually improve those things while we maintain the other movements and capacities, and over a year this approach makes sure that everything gets better.</p>
+            <p>All the tests we do in the Test Weeks are part of the Athlete Profile, and over the year we do 50 different tests. Your Athlete Profile does not only give you a score from 1 to 100 on each movement. It also compares different movements and lifts to find your weak points, and this helps us give you more individual adjustments.</p>
+            <p>For example, the profile might show that the reason your Muscle Up is lagging is not your technique in the Ring Muscle Up but your strength in the Pull Up. Or it might show that you do very well in the shorter time domains, but that we need to do a better job building your aerobic capacity. These are things that are hard to see from one workout but easy to see when the tests are put next to each other.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="sec steel" id="why">
+      <div class="wrap split">
+        <h2>Why Launch Control</h2>
+        <div>
+            <p class="lede">We have chosen to call this block Launch Control. The reason is that we have used the Building Block to build our capacities more separately, and now it is time to put it all together and launch the new athlete version of you.</p>
+            <p class="lede">But this should be done with control, because the training week looks a bit different this time. The biggest change is that we are more careful with fatigue on Mondays, Tuesdays and Fridays and push more on Wednesdays and Saturdays with double conditioning sessions. If you are able to stay in control of the intensity in the first days of the week this setup will give you very good results, but if you push every day it might be too much. You can read more about the reasoning below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE WEEK -->
+    <section class="sec" id="week">
+      <div class="wrap">
+        <div class="split">
+          <h2>How the training week has changed</h2>
+          <div>
+            <p>Over the years the way we build the training week has changed quite a lot. For a long period we were very focused on our Key Sessions during the week and we put them on the days where we were most ready, which was Monday and Friday right after a rest day. The logic was that when you are rested you are also able to train the hardest.</p>
+            <p>But over time we got the problem that while the Key Sessions were done very well, the days after were not done with the same quality. The main problem was that the fatigue carried over to the following days and brought down the quality in the lifts, the gymnastics and so on. And while fatigue is necessary to develop rep endurance, there are many capacities that are best trained with less fatigue.</p>
+            <p>In this block the goal is to build the intensity gradually over the training days. We do the training that is best done without fatigue first, like the Olympic lifts, gymnastics and threshold intervals, before the harder workouts, and then we use Wednesday and Saturday to really push the intensity and allow for more fatigue.</p>
+            <p>A simple way to think about it is to see the days between two rest days as one interval session. If we do three intervals we rarely want the first one to be the fastest, so we keep control on the first and the second one and save the push for the last one where we want to hold the same pace or go faster.</p>
+            <p>As we have talked about many times, the Main Track at Kriger Training often develops from things we first test with our individual athletes, and this setup of the training week is a clear example of that. Over time we have put more and more of our athletes into this rhythm with very good results, and that is why we now bring it into the Main Track.</p>
+            <p class="note">Our single session tracks do not have double conditioning sessions on Wednesdays and Saturdays, but they follow the same thinking, where we save most of the fatigue for the last training day before rest.</p>
+          </div>
+        </div>
+        <div class="curves">
+        <div class="cv old">
+          <div class="cv-txt">
+            <h3>Old Model</h3>
+            <span class="cv-sub">Key Sessions</span>
+            <p>Key Sessions on Monday and Friday at high RPE right after a rest day. The sessions were great but the days after did not get the same quality.</p>
+          </div>
+          <div class="cv-viz">
+            <svg viewBox="0 0 700 175" role="img" aria-label="Old Model: Mon Key session, Tue Medium, Wed Medium, Thu Rest, Fri Key session, Sat Medium, Sun Rest">
+              <line class="cv-base" x1="10" y1="150" x2="690" y2="150"/><path class="cl" d="M50,37.9 C100,37.9 100,91.0 150,91.0 C200,91.0 200,79.2 250,79.2" vector-effect="non-scaling-stroke"/><path class="cl" d="M450,37.9 C500,37.9 500,79.2 550,79.2" vector-effect="non-scaling-stroke"/><circle class="restdot" cx="350" cy="150" r="6"/><circle class="restdot" cx="650" cy="150" r="6"/><g class="plate" transform="translate(50,37.9)"><circle r="21" fill="#A3A8A6"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g><g class="plate" transform="translate(150,91.0)"><circle r="21" fill="#A3A8A6"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g><g class="plate" transform="translate(250,79.2)"><circle r="21" fill="#A3A8A6"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g><g class="plate" transform="translate(450,37.9)"><circle r="21" fill="#A3A8A6"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g><g class="plate" transform="translate(550,79.2)"><circle r="21" fill="#A3A8A6"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g>
+            </svg>
+            <div class="cv-days"><span><b>Mon</b>Key session</span><span><b>Tue</b>Medium</span><span><b>Wed</b>Medium</span><span><b>Thu</b>Rest</span><span><b>Fri</b>Key session</span><span><b>Sat</b>Medium</span><span><b>Sun</b>Rest</span></div>
+          </div>
+        </div>
+        <div class="cv new">
+          <div class="cv-txt">
+            <h3>New Model</h3>
+            <span class="cv-sub">Control to Push</span>
+            <p>Medium on Monday, easy on Tuesday and hard on Wednesday, and then medium on Friday and hard on Saturday so that the load ramps up toward the day before rest.</p>
+          </div>
+          <div class="cv-viz">
+            <svg viewBox="0 0 700 175" role="img" aria-label="New Model: Mon Medium, Tue Easy, Wed Hard, Thu Rest, Fri Medium, Sat Hard, Sun Rest">
+              <line class="cv-base" x1="10" y1="150" x2="690" y2="150"/><path class="cl" d="M50,79.2 C100,79.2 100,112.2 150,112.2 C200,112.2 200,37.9 250,37.9" vector-effect="non-scaling-stroke"/><path class="cl" d="M450,79.2 C500,79.2 500,37.9 550,37.9" vector-effect="non-scaling-stroke"/><circle class="restdot" cx="350" cy="150" r="6"/><circle class="restdot" cx="650" cy="150" r="6"/><g class="plate" transform="translate(50,79.2)"><circle r="21" fill="#1B1D1C"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g><g class="plate" transform="translate(150,112.2)"><circle r="21" fill="#1B1D1C"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g><g class="plate" transform="translate(250,37.9)"><circle r="21" fill="#1B1D1C"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g><g class="plate" transform="translate(450,79.2)"><circle r="21" fill="#1B1D1C"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g><g class="plate" transform="translate(550,37.9)"><circle r="21" fill="#1B1D1C"/><circle r="14" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1.5"/><circle r="5" fill="#fff"/></g>
+            </svg>
+            <div class="cv-days"><span><b>Mon</b>Medium</span><span><b>Tue</b>Easy</span><span><b>Wed</b>Hard</span><span><b>Thu</b>Rest</span><span><b>Fri</b>Medium</span><span><b>Sat</b>Hard</span><span><b>Sun</b>Rest</span></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="sec black">
+      <div class="wrap">
+        <p class="quote">We are not trying to maximize every single session. We are trying to maximize the development from the whole training week.</p>
+      </div>
+    </section>
+
+    <!-- TEMPLATE -->
+    <section class="sec steel" id="template">
+      <div class="wrap">
+        <h2>Template</h2>
+        <p style="margin-top: 24px;">All tracks follow the same structure, but the volume and the number of sessions are adjusted to your goal and the time you have. Below you find the template for each track.</p>
+        <div class="ttabs" role="tablist" aria-label="Tracks">
+          <button class="active" aria-selected="true" data-t="main" role="tab">Main Track</button>
+          <button aria-selected="false" data-t="90" role="tab">90 Min</button>
+          <button aria-selected="false" data-t="60" role="tab">60 Min</button>
+          <button aria-selected="false" data-t="engine" role="tab">Engine</button>
+          <button aria-selected="false" data-t="strength" role="tab">Strength</button>
+          <button aria-selected="false" data-t="master" role="tab">Master<span class="new">New</span></button>
+          <button aria-selected="false" data-t="3days" role="tab">3 Days<span class="new">New</span></button>
+        </div>
+        <div class="tpanel active" id="t-main" role="tabpanel">
+          <!-- VIDEO for the Main Track: turn on SHOW_TRACK_VIDEOS -->
+          <div class="wbar">
+            <div class="wtabs" role="tablist"><button class="active" data-w="a" role="tab" aria-selected="true">Week A</button><button data-w="b" role="tab" aria-selected="false">Week B</button></div>
+            <div class="tlegend"><div class="cats"><span><i style="background:#1E4FA6"></i>OLY</span><span><i style="background:#C8202A"></i>Strength</span><span><i style="background:#1F8048"></i>Gymnastics</span><span><i style="background:#E5A912"></i>CF</span><span><i style="background:#1B1D1C"></i>Engine</span><span><i style="background:#8F9693"></i>Accessories</span></div><div class="ramp"><span>RPE 3</span><span class="rampbar"><i style="background:#F6DBDD" title="RPE 3"></i><i style="background:#F6DBDD" title="RPE 5"></i><i style="background:#EDB5B8" title="RPE 6"></i><i style="background:#E08389" title="RPE 7"></i><i style="background:#D45259" title="RPE 8"></i><i style="background:#C8202A" title="RPE 9"></i></span><span>RPE 9</span><em>The stronger the color, the higher the RPE</em></div></div>
+          </div>
+          <div class="wgrid" data-week="a">
+            <div class="dcol medium"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#829DCE"><span class="pc">OLY</span><span class="pn">Barbell Cycling</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Lower Body Strength + Buy Out</span><span class="pr">RPE 7–8</span></div><div class="part inv" style="background:#4E4F4E"><span class="pc">Engine</span><span class="pn">Echo Bike Sprints (optional)</span><span class="pr">RPE 8</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part" style="background:#F1CF7B"><span class="pc">CF</span><span class="pn">Capacity Intervals + CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol easy"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds"><i>AM</i><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#B4D5C2"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 6</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part" style="background:#DBDBDB"><span class="pc">Engine</span><span class="pn">Zone 1 / Swim / Rest</span><span class="pr">RPE 3–4</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Capacity</small></div><div class="ds"><i>AM, Session 1</i><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 7</span></div></div><div class="ds"><i>PM, Session 2</i><div class="part" style="background:#F1CF7B"><span class="pn">CF Power Output</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium"><div class="dh"><b>Friday</b><span>Medium</span><small>Lower + upper body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#829DCE"><span class="pn">OLY</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#519C71"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 8</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#EEC661"><span class="pc">CF</span><span class="pn">Power Hour</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+          <div class="wgrid" data-week="b" hidden>
+            <div class="dcol medium"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#5076BA"><span class="pn">OLY</span><span class="pr">RPE 8</span></div><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower Body Strength + Buy Out</span><span class="pr">RPE 8</span></div><div class="part" style="background:#EBBC47"><span class="pc">CF</span><span class="pn">Speed Into Fire</span><span class="pr">RPE 8</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part inv" style="background:#676868"><span class="pc">Engine</span><span class="pn">Capacity Intervals</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol easy"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds"><i>AM</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#B4D5C2"><span class="pc">Gymnastics</span><span class="pn">Skill Progression</span><span class="pr">RPE 6</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pc">Accessories</span><span class="pn">Core</span><span class="pr">RPE 6</span></div><div class="part" style="background:#DBDBDB"><span class="pc">Engine</span><span class="pn">Zone 1 / Swim / Rest</span><span class="pr">RPE 3–4</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Capacity</small></div><div class="ds"><i>AM, Session 1</i><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 7</span></div></div><div class="ds"><i>PM, Session 2</i><div class="part" style="background:#EBBC47"><span class="pn">CF Power Output</span><span class="pr">RPE 8</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium"><div class="dh"><b>Friday</b><span>Medium</span><small>Lower + upper body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#698AC4"><span class="pn">OLY</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#519C71"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 8</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+        </div>
+        <div class="tpanel" id="t-90" role="tabpanel">
+          <!-- VIDEO for the 90 Min Track: turn on SHOW_TRACK_VIDEOS -->
+          <div class="wbar">
+            <div class="wtabs" role="tablist"><button class="active" data-w="a" role="tab" aria-selected="true">Week A</button><button data-w="b" role="tab" aria-selected="false">Week B</button></div>
+            <div class="tlegend"><div class="cats"><span><i style="background:#1E4FA6"></i>OLY</span><span><i style="background:#C8202A"></i>Strength</span><span><i style="background:#1F8048"></i>Gymnastics</span><span><i style="background:#E5A912"></i>CF</span><span><i style="background:#1B1D1C"></i>Engine</span><span><i style="background:#8F9693"></i>Accessories</span></div><div class="ramp"><span>RPE 3</span><span class="rampbar"><i style="background:#F6DBDD" title="RPE 3"></i><i style="background:#F6DBDD" title="RPE 5"></i><i style="background:#EDB5B8" title="RPE 6"></i><i style="background:#E08389" title="RPE 7"></i><i style="background:#D45259" title="RPE 8"></i><i style="background:#C8202A" title="RPE 9"></i></span><span>RPE 9</span><em>The stronger the color, the higher the RPE</em></div></div>
+          </div>
+          <div class="wgrid" data-week="a">
+            <div class="dcol medium one"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#829DCE"><span class="pc">OLY</span><span class="pn">Barbell Cycling</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Lower Body Strength</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#F1CF7B"><span class="pc">CF</span><span class="pn">Capacity Intervals + CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol easy one"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#B4D5C2"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 6</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DBDBDB"><span class="pc">Engine</span><span class="pn">Zone 1–2 Bike Erg</span><span class="pr">RPE 3–4</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Capacity</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#F1CF7B"><span class="pn">CF Power Output</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium one"><div class="dh"><b>Friday</b><span>Medium</span><small>Lower + upper body</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#829DCE"><span class="pn">OLY</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#519C71"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 8</span></div><div class="part" style="background:#EEC661"><span class="pc">CF</span><span class="pn">Power Hour</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+          <div class="wgrid" data-week="b" hidden>
+            <div class="dcol medium one"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#5076BA"><span class="pn">OLY</span><span class="pr">RPE 8</span></div><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower Body Strength</span><span class="pr">RPE 8</span></div><div class="part inv" style="background:#676868"><span class="pc">Engine</span><span class="pn">Capacity Intervals</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol easy one"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#B4D5C2"><span class="pc">Gymnastics</span><span class="pn">Skill Progression</span><span class="pr">RPE 6</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Capacity</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#EBBC47"><span class="pn">CF Power Output</span><span class="pr">RPE 8</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium one"><div class="dh"><b>Friday</b><span>Medium</span><small>Lower + upper body</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#698AC4"><span class="pn">OLY</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories (optional)</span><span class="pr">RPE 6</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds dr"><i>90 min</i><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#519C71"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 8</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+        </div>
+        <div class="tpanel" id="t-60" role="tabpanel">
+          <!-- VIDEO for the 60 Min Track: turn on SHOW_TRACK_VIDEOS -->
+          <div class="wbar">
+            <div class="wtabs" role="tablist"><button class="active" data-w="a" role="tab" aria-selected="true">Week A</button><button data-w="b" role="tab" aria-selected="false">Week B</button></div>
+            <div class="tlegend"><div class="cats"><span><i style="background:#1E4FA6"></i>OLY</span><span><i style="background:#C8202A"></i>Strength</span><span><i style="background:#1F8048"></i>Gymnastics</span><span><i style="background:#E5A912"></i>CF</span><span><i style="background:#1B1D1C"></i>Engine</span><span><i style="background:#8F9693"></i>Accessories</span></div><div class="ramp"><span>RPE 3</span><span class="rampbar"><i style="background:#F6DBDD" title="RPE 3"></i><i style="background:#F6DBDD" title="RPE 5"></i><i style="background:#EDB5B8" title="RPE 6"></i><i style="background:#E08389" title="RPE 7"></i><i style="background:#D45259" title="RPE 8"></i><i style="background:#C8202A" title="RPE 9"></i></span><span>RPE 9</span><em>The stronger the color, the higher the RPE</em></div></div>
+          </div>
+          <div class="wgrid" data-week="a">
+            <div class="dcol medium one"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Lower Body Strength + Buy Out</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#F1CF7B"><span class="pn">CF Intervals</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol easy one"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Engine</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol easy one"><div class="dh"><b>Thursday</b><span>Easy</span><small>Recovery</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#DBDBDB"><span class="pc">Engine</span><span class="pn">Zone 1–2 Bike Erg</span><span class="pr">RPE 3–4</span></div></div></div>
+            <div class="dcol medium one"><div class="dh"><b>Friday</b><span>Medium</span><small>OLY + CF</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#829DCE"><span class="pn">OLY</span><span class="pr">RPE 7</span></div><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#EEC661"><span class="pc">CF</span><span class="pn">Power Hour</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+          <div class="wgrid" data-week="b" hidden>
+            <div class="dcol medium one"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower Body Strength + Buy Out</span><span class="pr">RPE 8</span></div><div class="part inv" style="background:#676868"><span class="pc">Engine</span><span class="pn">Capacity Intervals</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol easy one"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Engine</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol easy one"><div class="dh"><b>Thursday</b><span>Easy</span><small>Recovery</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#DBDBDB"><span class="pc">Engine</span><span class="pn">Zone 1–2 Bike Erg</span><span class="pr">RPE 3–4</span></div></div></div>
+            <div class="dcol medium one"><div class="dh"><b>Friday</b><span>Medium</span><small>OLY + CF</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#698AC4"><span class="pn">OLY</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds dr"><i>60 min</i><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+        </div>
+        <div class="tpanel" id="t-engine" role="tabpanel">
+          <!-- VIDEO for the Engine Track: turn on SHOW_TRACK_VIDEOS -->
+          <div class="wbar">
+            <div class="wtabs" role="tablist"><button class="active" data-w="a" role="tab" aria-selected="true">Week A</button><button data-w="b" role="tab" aria-selected="false">Week B</button></div>
+            <div class="tlegend"><div class="cats"><span><i style="background:#1E4FA6"></i>OLY</span><span><i style="background:#C8202A"></i>Strength</span><span><i style="background:#1F8048"></i>Gymnastics</span><span><i style="background:#E5A912"></i>CF</span><span><i style="background:#1B1D1C"></i>Engine</span><span><i style="background:#8F9693"></i>Accessories</span></div><div class="ramp"><span>RPE 3</span><span class="rampbar"><i style="background:#F6DBDD" title="RPE 3"></i><i style="background:#F6DBDD" title="RPE 5"></i><i style="background:#EDB5B8" title="RPE 6"></i><i style="background:#E08389" title="RPE 7"></i><i style="background:#D45259" title="RPE 8"></i><i style="background:#C8202A" title="RPE 9"></i></span><span>RPE 9</span><em>The stronger the color, the higher the RPE</em></div></div>
+          </div>
+          <div class="wgrid" data-week="a">
+            <div class="dcol medium"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#829DCE"><span class="pc">OLY</span><span class="pn">Barbell Cycling</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Lower Body Strength + Buy Out</span><span class="pr">RPE 7–8</span></div><div class="part inv" style="background:#4E4F4E"><span class="pc">Engine</span><span class="pn">Echo Bike Sprints (optional)</span><span class="pr">RPE 8</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part" style="background:#F1CF7B"><span class="pc">CF</span><span class="pn">Capacity Intervals + CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol easy"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds"><i>AM</i><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#B4D5C2"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 6</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part" style="background:#DBDBDB"><span class="pc">Engine</span><span class="pn">Zone 1 / Swim / Rest</span><span class="pr">RPE 3–4</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Capacity</small></div><div class="ds"><i>AM, Session 1</i><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 7</span></div></div><div class="ds"><i>PM, Session 2</i><div class="part" style="background:#F1CF7B"><span class="pn">CF Power Output</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium"><div class="dh"><b>Friday</b><span>Medium</span><small>Zone 1 + CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#DBDBDB"><span class="pc">Engine</span><span class="pn">Zone 1: 60 min Bike or Run</span><span class="pr">RPE 3–4</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#519C71"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 8</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#EEC661"><span class="pc">CF</span><span class="pn">Power Hour</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+          <div class="wgrid" data-week="b" hidden>
+            <div class="dcol medium"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#5076BA"><span class="pn">OLY</span><span class="pr">RPE 8</span></div><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower Body Strength + Buy Out</span><span class="pr">RPE 8</span></div><div class="part" style="background:#EBBC47"><span class="pc">CF</span><span class="pn">Speed Into Fire</span><span class="pr">RPE 8</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part inv" style="background:#676868"><span class="pc">Engine</span><span class="pn">Capacity Intervals</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol easy"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds"><i>AM</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#B4D5C2"><span class="pc">Gymnastics</span><span class="pn">Skill Progression</span><span class="pr">RPE 6</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pc">Accessories</span><span class="pn">Core</span><span class="pr">RPE 6</span></div><div class="part" style="background:#DBDBDB"><span class="pc">Engine</span><span class="pn">Zone 1 / Swim / Rest</span><span class="pr">RPE 3–4</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Capacity</small></div><div class="ds"><i>AM, Session 1</i><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 7</span></div></div><div class="ds"><i>PM, Session 2</i><div class="part" style="background:#EBBC47"><span class="pn">CF Power Output</span><span class="pr">RPE 8</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium"><div class="dh"><b>Friday</b><span>Medium</span><small>Zone 1 + CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#DBDBDB"><span class="pc">Engine</span><span class="pn">Zone 1: 60 min Bike or Run</span><span class="pr">RPE 3–4</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#519C71"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 8</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+        </div>
+        <div class="tpanel" id="t-strength" role="tabpanel">
+          <!-- VIDEO for the Strength Track: turn on SHOW_TRACK_VIDEOS -->
+          <div class="wbar">
+            <div class="wtabs" role="tablist"><button class="active" data-w="a" role="tab" aria-selected="true">Week A</button><button data-w="b" role="tab" aria-selected="false">Week B</button></div>
+            <div class="tlegend"><div class="cats"><span><i style="background:#1E4FA6"></i>OLY</span><span><i style="background:#C8202A"></i>Strength</span><span><i style="background:#1F8048"></i>Gymnastics</span><span><i style="background:#E5A912"></i>CF</span><span><i style="background:#1B1D1C"></i>Engine</span><span><i style="background:#8F9693"></i>Accessories</span></div><div class="ramp"><span>RPE 3</span><span class="rampbar"><i style="background:#F6DBDD" title="RPE 3"></i><i style="background:#F6DBDD" title="RPE 5"></i><i style="background:#EDB5B8" title="RPE 6"></i><i style="background:#E08389" title="RPE 7"></i><i style="background:#D45259" title="RPE 8"></i><i style="background:#C8202A" title="RPE 9"></i></span><span>RPE 9</span><em>The stronger the color, the higher the RPE</em></div></div>
+          </div>
+          <div class="wgrid" data-week="a">
+            <div class="dcol medium"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#829DCE"><span class="pc">OLY</span><span class="pn">Barbell Cycling</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Lower Body Strength + Buy Out</span><span class="pr">RPE 7–8</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part" style="background:#F1CF7B"><span class="pc">CF</span><span class="pn">Capacity Intervals + CF Quality</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol easy"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds"><i>AM</i><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#B4D5C2"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 6</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="restbox">Rest</div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Lower body + CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Legs + Posterior Chain Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#F1CF7B"><span class="pn">CF Power Output</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="restbox">Rest</div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium"><div class="dh"><b>Friday</b><span>Medium</span><small>Lower + upper body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#829DCE"><span class="pn">OLY</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#9A9B9A"><span class="pc">Engine</span><span class="pn">Bike Erg Intervals</span><span class="pr">RPE 6–7</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#519C71"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 8</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#EEC661"><span class="pc">CF</span><span class="pn">Power Hour</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+          <div class="wgrid" data-week="b" hidden>
+            <div class="dcol medium"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#5076BA"><span class="pn">OLY</span><span class="pr">RPE 8</span></div><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower Body Strength + Buy Out</span><span class="pr">RPE 8</span></div><div class="part" style="background:#EBBC47"><span class="pc">CF</span><span class="pn">Speed Into Fire</span><span class="pr">RPE 8</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part inv" style="background:#676868"><span class="pc">Engine</span><span class="pn">Capacity Intervals</span><span class="pr">RPE 7.5</span></div></div></div>
+            <div class="dcol easy"><div class="dh"><b>Tuesday</b><span>Easy</span><small>Upper body + gymnastics</small></div><div class="ds"><i>AM</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#B4D5C2"><span class="pc">Gymnastics</span><span class="pn">Skill Progression</span><span class="pr">RPE 6</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="restbox">Rest</div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Lower body + CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Legs + Posterior Chain Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#EBBC47"><span class="pn">CF Power Output</span><span class="pr">RPE 8</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div><div class="ds"><i>PM</i><div class="restbox">Rest</div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium"><div class="dh"><b>Friday</b><span>Medium</span><small>Lower + upper body</small></div><div class="ds"><i>AM</i><div class="part" style="background:#698AC4"><span class="pn">OLY</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Bike</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol hard"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds"><i>AM</i><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#519C71"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 8</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div></div><div class="ds"><i>PM</i><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+        </div>
+        <div class="tpanel" id="t-master" role="tabpanel">
+          <!-- VIDEO for the Master Track: turn on SHOW_TRACK_VIDEOS -->
+          <div class="wbar">
+            <div class="wtabs" role="tablist"><button class="active" data-w="a" role="tab" aria-selected="true">Week A</button><button data-w="b" role="tab" aria-selected="false">Week B</button></div>
+            <div class="tlegend"><div class="cats"><span><i style="background:#1E4FA6"></i>OLY</span><span><i style="background:#C8202A"></i>Strength</span><span><i style="background:#1F8048"></i>Gymnastics</span><span><i style="background:#E5A912"></i>CF</span><span><i style="background:#1B1D1C"></i>Engine</span><span><i style="background:#8F9693"></i>Accessories</span></div><div class="ramp"><span>RPE 3</span><span class="rampbar"><i style="background:#F6DBDD" title="RPE 3"></i><i style="background:#F6DBDD" title="RPE 5"></i><i style="background:#EDB5B8" title="RPE 6"></i><i style="background:#E08389" title="RPE 7"></i><i style="background:#D45259" title="RPE 8"></i><i style="background:#C8202A" title="RPE 9"></i></span><span>RPE 9</span><em>The stronger the color, the higher the RPE</em></div></div>
+          </div>
+          <div class="wgrid" data-week="a">
+            <div class="dcol medium one"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#829DCE"><span class="pc">OLY</span><span class="pn">Barbell Cycling</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Lower Body Strength + Buy Out</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#F1CF7B"><span class="pc">CF</span><span class="pn">Capacity Intervals + CF Quality</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E6E8E7"><span class="pc">Accessories</span><span class="pn">Back Health (optional)</span><span class="pr">RPE 5–6</span></div></div></div>
+            <div class="dcol medium one"><div class="dh"><b>Tuesday</b><span>Medium</span><small>Upper body + engine</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div><div class="part" style="background:#9A9B9A"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 6–7</span></div><div class="part" style="background:#E6E8E7"><span class="pc">Accessories</span><span class="pn">Shoulder Health (optional)</span><span class="pr">RPE 5–6</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Gymnastics + CF</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#B4D5C2"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 6</span></div><div class="part" style="background:#F1CF7B"><span class="pn">CF Power Output</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium one"><div class="dh"><b>Friday</b><span>Medium</span><small>Lower + upper body</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#829DCE"><span class="pn">OLY</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E6E8E7"><span class="pc">Accessories</span><span class="pn">Knee Health (optional)</span><span class="pr">RPE 5–6</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#519C71"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 8</span></div><div class="part" style="background:#EEC661"><span class="pc">CF</span><span class="pn">Power Hour</span><span class="pr">RPE 7.5</span></div><div class="part" style="background:#E6E8E7"><span class="pc">Accessories</span><span class="pn">Elbow Health</span><span class="pr">RPE 5–6</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+          <div class="wgrid" data-week="b" hidden>
+            <div class="dcol medium one"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#5076BA"><span class="pn">OLY</span><span class="pr">RPE 8</span></div><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Lower Body Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#EBBC47"><span class="pc">CF</span><span class="pn">Speed Into Fire</span><span class="pr">RPE 8</span></div><div class="part inv" style="background:#676868"><span class="pc">Engine</span><span class="pn">Capacity Intervals</span><span class="pr">RPE 7.5</span></div><div class="part" style="background:#E6E8E7"><span class="pc">Accessories</span><span class="pn">Back Health (optional)</span><span class="pr">RPE 5–6</span></div></div></div>
+            <div class="dcol medium one"><div class="dh"><b>Tuesday</b><span>Medium</span><small>Upper body + engine</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Upper Body Strength</span><span class="pr">RPE 8</span></div><div class="part" style="background:#83B899"><span class="pc">Gymnastics</span><span class="pn">Gymnastic Capacity</span><span class="pr">RPE 7</span></div><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals: Run or Bike</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E6E8E7"><span class="pc">Accessories</span><span class="pn">Shoulder Health (optional)</span><span class="pr">RPE 5–6</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Gymnastics + CF</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#B4D5C2"><span class="pc">Gymnastics</span><span class="pn">Skill Progression</span><span class="pr">RPE 6</span></div><div class="part" style="background:#EBBC47"><span class="pn">CF Power Output</span><span class="pr">RPE 8</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol medium one"><div class="dh"><b>Friday</b><span>Medium</span><small>Lower + upper body</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#698AC4"><span class="pn">OLY</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#F1CF7B"><span class="pn">CF Quality</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E6E8E7"><span class="pc">Accessories</span><span class="pn">Knee Health (optional)</span><span class="pr">RPE 5–6</span></div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Saturday</b><span>Hard</span><small>CF</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Lower + Upper Strength</span><span class="pr">RPE 7</span></div><div class="part" style="background:#519C71"><span class="pn">Gymnastics Skill</span><span class="pr">RPE 8</span></div><div class="part" style="background:#E8B32C"><span class="pn">CF Workout</span><span class="pr">RPE 8–9</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+        </div>
+        <div class="tpanel" id="t-3days" role="tabpanel">
+          <!-- VIDEO for the 3 Days Track: turn on SHOW_TRACK_VIDEOS -->
+          <div class="wbar">
+            <div class="wtabs" role="tablist"><button class="active" data-w="a" role="tab" aria-selected="true">Week A</button><button data-w="b" role="tab" aria-selected="false">Week B</button></div>
+            <div class="tlegend"><div class="cats"><span><i style="background:#1E4FA6"></i>OLY</span><span><i style="background:#C8202A"></i>Strength</span><span><i style="background:#1F8048"></i>Gymnastics</span><span><i style="background:#E5A912"></i>CF</span><span><i style="background:#1B1D1C"></i>Engine</span><span><i style="background:#8F9693"></i>Accessories</span></div><div class="ramp"><span>RPE 3</span><span class="rampbar"><i style="background:#F6DBDD" title="RPE 3"></i><i style="background:#F6DBDD" title="RPE 5"></i><i style="background:#EDB5B8" title="RPE 6"></i><i style="background:#E08389" title="RPE 7"></i><i style="background:#D45259" title="RPE 8"></i><i style="background:#C8202A" title="RPE 9"></i></span><span>RPE 9</span><em>The stronger the color, the higher the RPE</em></div></div>
+          </div>
+          <div class="wgrid" data-week="a">
+            <div class="dcol medium one"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#829DCE"><span class="pc">OLY</span><span class="pn">Barbell Cycling</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Front Squat + Pull Ups</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#F1CF7B"><span class="pc">CF</span><span class="pn">Capacity Intervals + CF Quality</span><span class="pr">RPE 7</span></div><div class="part" style="background:#DADCDB"><span class="pc">Accessories</span><span class="pn">Posterior Chain (optional)</span><span class="pr">RPE 6</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Tuesday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Capacity</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Posterior Chain Strength</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#B4C4E1"><span class="pn">OLY / Skill</span><span class="pr">RPE 6</span></div><div class="part" style="background:#EBBC47"><span class="pn">CF Intervals EMOM</span><span class="pr">RPE 8</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories (optional)</span><span class="pr">RPE 6</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Friday</b><span>Hard</span><small>Full body</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#829DCE"><span class="pn">OLY</span><span class="pr">RPE 7</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Squats + HSPU</span><span class="pr">RPE 7</span></div><div class="part" style="background:#EEC661"><span class="pc">CF</span><span class="pn">Power Hour</span><span class="pr">RPE 7.5</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories (optional)</span><span class="pr">RPE 6</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Saturday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+          <div class="wgrid" data-week="b" hidden>
+            <div class="dcol medium one"><div class="dh"><b>Monday</b><span>Medium</span><small>Lower body</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#5076BA"><span class="pn">OLY</span><span class="pr">RPE 8</span></div><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Front Squat + Strict Pull Ups</span><span class="pr">RPE 8</span></div><div class="part" style="background:#D45259"><span class="pc">Strength</span><span class="pn">Strict HSPU</span><span class="pr">RPE 8</span></div><div class="part inv" style="background:#676868"><span class="pc">Engine</span><span class="pn">Capacity Intervals</span><span class="pr">RPE 7.5</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories (optional)</span><span class="pr">RPE 6</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Tuesday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Wednesday</b><span>Hard</span><small>Capacity</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#DA6A71"><span class="pc">Strength</span><span class="pn">Posterior Chain + Press Strength</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#B4C4E1"><span class="pn">OLY / Skill</span><span class="pr">RPE 6</span></div><div class="part" style="background:#EBBC47"><span class="pn">CF Intervals EMOM</span><span class="pr">RPE 8</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories (optional)</span><span class="pr">RPE 6</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Thursday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest / Active Recovery</div></div></div>
+            <div class="dcol hard one"><div class="dh"><b>Friday</b><span>Hard</span><small>Full body</small></div><div class="ds dr"><i>Session</i><div class="part" style="background:#698AC4"><span class="pn">OLY</span><span class="pr">RPE 7–8</span></div><div class="part" style="background:#E08389"><span class="pc">Strength</span><span class="pn">Back Squat + Rope Climbs</span><span class="pr">RPE 7</span></div><div class="part" style="background:#EBBC47"><span class="pn">CF Intervals</span><span class="pr">RPE 8</span></div><div class="part" style="background:#DADCDB"><span class="pn">Accessories</span><span class="pr">RPE 6</span></div><div class="part" style="background:#808181"><span class="pc">Engine</span><span class="pn">Threshold Intervals (optional)</span><span class="pr">RPE 7</span></div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Saturday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+            <div class="dcol rest"><div class="dh"><b>Sunday</b><span>Rest</span></div><div class="ds dr"><div class="restbox">Rest</div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEST WEEK 3 AND THE CAPACITIES -->
+    <section class="sec" id="tests">
+      <div class="wrap">
+        <div class="split">
+          <h2>Test Week 3</h2>
+          <div>
+            <p class="lede">At the end of the block we do Test Week 3 from December 28 to January 3, and these are the tests we are working toward.</p>
+            <p>Below we explain the goals for each capacity in this block and how we will train to reach them.</p>
+          </div>
+        </div>
+        <div class="caps">
+        <div class="cap">
+          <div class="cap-side">
+            <h3>Strength / OLY</h3>
+            <div class="tl"><p class="tl-k">Tested in Test Week 3</p><b>Strength</b><ul><li>1RM Front Squat</li><li>1RM Supinated Strict Pull Up (CTB)</li><li>5RM Deficit Strict HSPU</li><li>Max Height Vertical Jump</li></ul><b>Olympic Lifts</b><ul><li>1RM Snatch</li><li>1RM Power Clean</li></ul></div>
+          </div>
+          <div class="cap-body">
+            <p>In Test Week 3 at the end of the block we test the 1RM Front Squat, 1RM Snatch, 1RM Power Clean, 1RM Strict Pull Up and 5RM Deficit Strict HSPU.</p>
+            <p>All of these lifts follow a linear progression. The Front Squat alternates between heavy singles, so that you get used to handling heavy weights, and a more intense session with sets of 3-5 reps. Since the sets and reps are a little lower than usual, we finish these strength parts with a buy out where we add volume in the same movement pattern.</p>
+            <p>For example, a session with heavy Front Squat singles can finish with Heavy High Wall Balls. This way we can be very specific in the max strength work and still get more variation in the buy outs, so that you are ready for all the different squats that can show up in a competition.</p>
+            <p>In the Olympic lifts we want to improve the 1RM for the tests, but we also use this block to get better at lifting in metcons, which is a very important skill in this sport. It's good to have a strong 1RM, but we also need to be able to lift 80% of it in a workout. Because of this we alternate, so that every other week is a linear progression where we build on the last training block and every other week is barbell cycling under fatigue.</p>
+            <p>We also keep the position work on the Squat Snatch from the last block. If you feel that your overhead mobility is holding you back, you should consider adding our <a class="ilink" href="https://kriger.fitr.training/p/addonOHmobility" target="_blank" rel="noopener">Overhead Mobility add on</a> to your program (15 min, 3 times a week).</p>
+          </div>
+        </div>
+        <div class="cap">
+          <div class="cap-side">
+            <h3>Gymnastics</h3>
+            <div class="tl"><p class="tl-k">Tested in Test Week 3</p><ul><li>Max Ring Muscle Up</li><li>Handstand Walk Skill Test</li></ul></div>
+          </div>
+          <div class="cap-body">
+            <p>We put a lot of work into Pull and Push strength in the last training block, and since it decides so much of how our gymnastics look, this work continues. The difference now is that the strength work focuses on the tests, which for Pull is the Strict Pull Up and for Push is the 5RM Deficit Strict HSPU.</p>
+            <p>In this type of block there is a lot of variation in the gymnastic movements, because we now want the Pull and Push strength and the technique EMOMs to make us better at combining the movements. We keep our Gymnastic Tuesdays where we do a lot of this work, and by using many different pulling and pushing movements in different angles we build more volume tolerance with a lower risk of overuse injuries than if we did one movement at high volume.</p>
+            <p>There are two movements where we put a little extra focus:</p>
+            <p><b>Ring Muscle Up:</b> For Level 1 the goal is to get your first Ring Muscle Up, while Level 2 and 3 work on increasing the max reps. You will see big sets of Ring Muscle Ups both in the interval work and in the workouts.</p>
+            <p><b>Handstand Walk:</b> For Level 1 it is about learning to walk on your hands, Level 2 prepares for a 2 min max distance test, and Level 3 works on the Handstand Walk skills and obstacles. We end the block with a tough skill test.</p>
+          </div>
+        </div>
+        <div class="cap">
+          <div class="cap-side">
+            <h3>Endurance / CF Specific</h3>
+            <div class="tl"><p class="tl-k">Tested in Test Week 3</p><b>Endurance</b><ul><li>Mikkos Triangle for max cal<small>40 min: Row, Ski Erg and Bike Erg</small></li><li>100 Bar Facing Burpees for time</li></ul><b>CF Specific / Mix</b><ul><li>20 Sandbag Cleans for time<small>90/70 kg</small></li><li>Friendly Fran</li><li>Open 16.1</li></ul></div>
+          </div>
+          <div class="cap-body">
+            <p>As in all CF Specific Blocks we really push the volume for both endurance and sport specific work. We finish the block by testing Mikkos Triangle, 100 Bar Facing Burpees for time, Open 16.1, Friendly Fran and 20 Sandbag Cleans for time. These tests work well as goals for a block where we also start getting ready for the online qualifiers that we know many of you have in January and February.</p>
+            <p>The biggest change in how we plan the endurance is the new Wednesday, where we go all in on the endurance and sport specific qualities. The first session is threshold intervals on the run or the bike, where we collect volume at a pace you can hold on every interval, and the second session is sport specific with a CF Quality piece and a workout.</p>
+            <p>The idea is inspired by double threshold training from running. When we collect a lot of conditioning on Wednesday, Monday and Tuesday can be more focused on high quality development in strength, Olympic lifting and gymnastics, and since we have rest the day after, Wednesday is also the day where we can allow ourselves to go a little harder. Within the day we use the same philosophy as over the week, with control in the first session and room to increase the output at the end.</p>
+            <p>If you have the opportunity to train twice a day we really recommend trying this double endurance day. If you don't have time for two sessions every day, one solution is to train once on Monday and Tuesday and then do both sessions on Wednesday, so that you still get the full benefit of the volume.</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRACKS -->
+    <section class="sec steel" id="tracks">
+      <div class="wrap">
+        <div class="split">
+          <h2>New: Master Track and 3 Days Track</h2>
+          <div>
+            <p>Technically the Master Track is not new, but what is new is that we now have this track available in the Main program together with the other tracks. The reason is that we wanted the flexibility to switch between the programs, so that on a day where you have less time you can choose the 60 min track and in a week where you have fewer training days you can choose the 3 day program.</p>
+            <p>All tracks follow the same structure but are adjusted for different goals and different amounts of time (and how old your body feels ;)).</p>
+          </div>
+        </div>
+        <div class="track-list">
+          <div class="track"><h3>Main Track </h3><p class="tag">Recommended</p><p>The program as it is written with two sessions a day and the new Wednesday format.</p></div>
+          <div class="track"><h3>90 Min Track </h3><p class="tag">One session a day</p><p>The same week in one session of around 90 minutes.</p></div>
+          <div class="track"><h3>60 Min Track </h3><p class="tag">One session a day</p><p>The same week in one session of around 60 minutes, and a good choice on the days where you have less time.</p></div>
+          <div class="track"><h3>Engine Track </h3><p class="tag">Engine focus</p><p>More conditioning for the athletes where the engine is what holds them back in the workouts. 2 sessions a day.</p></div>
+          <div class="track"><h3>Strength Track </h3><p class="tag">Strength focus</p><p>Less conditioning and more accessory work so that the quality stays as high as possible on the lifts. 1&ndash;2 sessions a day.</p></div>
+          <div class="track"><h3>Master Track <small>New in the program</small></h3><p class="tag">Same structure</p><p>The same structure but adjusted for a body that needs a little more recovery between the hardest sessions.</p></div>
+          <div class="track"><h3>3 Days Track <small>New</small></h3><p class="tag">Three sessions a week</p><p>Three sessions a week of 90&ndash;100 minutes for the weeks where you have fewer training days.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL -->
+    <section class="sec black" id="final">
+      <div class="wrap final-grid">
+        <img src="img/ODAW5-20.jpg" alt="Athlete celebrating at the end of a workout at a competition" loading="lazy" style="object-position: 38% 30%;">
+        <div>
+          <h2>Final words</h2>
+          <p style="margin-top: 24px;">We look forward to attacking this block with you. If you have any questions about how you should attack this block, send us a message in the FITR chat and we are happy to help.</p>
+          <a class="btn light" href="https://app.fitr.training/p/Kriger" target="_blank" rel="noopener">Go to the program</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <img src="img/kriger-logo.png" alt="Kriger Training">
+      <nav>
+        <a href="https://block1.krigertraining.com/" target="_blank" rel="noopener">Block 1 guide</a>
+        <a href="https://block4.krigertraining.com/" target="_blank" rel="noopener">CF Specific Block 4</a>
+        <a href="https://block5.krigertraining.com/">Building Block 5</a>
+        <a href="https://block5.krigertraining.com/athlete-profile.html">Athlete Profile</a>
+      </nav>
+      <span>&copy; 2026 Kriger Training</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const menu = document.querySelector('.menu'), links = document.getElementById('navlinks');
+    menu.addEventListener('click', () => { const o = links.classList.toggle('open'); menu.setAttribute('aria-expanded', o); });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); menu.setAttribute('aria-expanded', false); }));
+
+    // Nav border on scroll
+    const nav = document.querySelector('.nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+    // Videos: thumbnail first, the YouTube player loads on click.
+    // Opened as a local file YouTube refuses to play embeds (error 153), so then we open YouTube in a new tab.
+    document.querySelectorAll('[data-yt]').forEach(v => {
+      const id = v.dataset.yt, img = v.querySelector('img');
+      const hq = () => { if (!img.src.includes('hqdefault')) img.src = 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg'; };
+      img.addEventListener('load', () => { if (img.naturalWidth < 200) hq(); });
+      img.addEventListener('error', hq);
+      v.addEventListener('click', () => {
+        if (v.classList.contains('on')) return;
+        if (location.protocol === 'file:') { window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener'); return; }
+        const f = document.createElement('iframe');
+        f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+        f.title = v.getAttribute('aria-label') || 'Video';
+        f.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+        f.referrerPolicy = 'strict-origin-when-cross-origin';
+        f.allowFullscreen = true;
+        v.appendChild(f); v.classList.add('on');
+      });
+    });
+
+    // Track tabs
+    document.querySelectorAll('.ttabs button').forEach(btn => btn.addEventListener('click', () => {
+      document.querySelectorAll('.ttabs button').forEach(b => { b.classList.toggle('active', b === btn); b.setAttribute('aria-selected', b === btn); });
+      document.querySelectorAll('.tpanel').forEach(p => p.classList.toggle('active', p.id === 't-' + btn.dataset.t));
+    }));
+
+    // Week A / B (per panel, so every track can get its own weeks later)
+    document.querySelectorAll('.tpanel').forEach(panel => panel.querySelectorAll('.wtabs button').forEach(btn => btn.addEventListener('click', () => {
+      panel.querySelectorAll('.wtabs button').forEach(b => { b.classList.toggle('active', b === btn); b.setAttribute('aria-selected', b === btn); });
+      panel.querySelectorAll('.wgrid').forEach(g => { g.hidden = g.dataset.week !== btn.dataset.w; });
+    })));
+
+    // Draw the new week curve once when it comes into view
+    const cvNew = document.querySelector('.cv.new');
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver((es, o) => es.forEach(e => { if (e.isIntersecting) { cvNew.classList.add('drawn'); o.disconnect(); } }), { threshold: 0.4 }).observe(cvNew);
+    } else { cvNew.classList.add('drawn'); }
+  </script>
+</body>
+</html>
